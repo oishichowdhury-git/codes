@@ -1,0 +1,21 @@
+Sw
+Uc - stm.. C, C++ - what prod, mem, time, battery low, ptr, stacks, multithreadin, figure out resourses, time, space complex
+Assembely code when c doesnt work/ RTOS, time management, hash mem.., recur.. Mem complexity, time complex, optimise code..
+Uc.., interupts
+Core programming.. Core ancii
+UNIX, Linux, rtos
+Contracts..
+Libraries
+Keep writing codes
+Diff operations
+Hw - uc, own board
+Exp on comtroller.. Push limits req/ sec, 
+Domain check
+
+Hw
+Board, System, prod design
+Chip design.. Not req
+Pick domain right
+
+
+Comipler - keep cooding

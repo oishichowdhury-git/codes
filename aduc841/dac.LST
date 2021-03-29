@@ -1,0 +1,54 @@
+C51 COMPILER V9.06   DAC                                                                   08/22/2017 16:16:46 PAGE 1   
+
+
+C51 COMPILER V9.06, COMPILATION OF MODULE DAC
+OBJECT MODULE PLACED IN dac.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE dac.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<stdio.h>
+   2          #include<aduc841.h>
+   3          void MiliDelay(unsigned int itime)               // 1 mili second DELAY FUNCTION 
+   4          {
+   5   1      unsigned int a,b;
+   6   1      for(a=0;a<itime;a++)
+   7   1      {
+   8   2      for (b=0;b<1182;b++) ;
+   9   2      }
+  10   1      } 
+  11          
+  12          void main(void)
+  13          {
+  14   1      
+  15   1        T3CON=0x084;    //    to configure
+  16   1        T3FD= 0x2D;           //       to baudrate 38400                                     
+  17   1        SCON= 0x050;    // enable serial transmission
+  18   1      
+  19   1        DACCON=0x7B;
+  20   1      
+  21   1        MiliDelay(50);
+  22   1        DAC0H=0X0a;
+  23   1        DAC0L=0Xa0;
+  24   1        DAC1H=0X0a;
+  25   1        DAC1L=0Xa0;
+  26   1      
+  27   1        DACCON=0x7F;
+  28   1        MiliDelay(50);
+  29   1      
+  30   1        while(1);
+  31   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     71    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

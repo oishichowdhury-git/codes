@@ -1,0 +1,4 @@
+"START_AD.obj",
+"dac.obj" 
+TO "dac" 
+RAMSIZE(256) 
